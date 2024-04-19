@@ -1,4 +1,11 @@
 # Changelog
+## [3.1.3](https://github.com/weigui404/QDReadHook/compare/v3.1.3...v3.1.3) (2024-04-19)
+
+
+### Miscellaneous
+
+* **master:** release 3.1.3 ([d79c5fe](https://github.com/weigui404/QDReadHook/commit/d79c5fe0a337005acf606e596bb9e9317c8e5186))
+
 ## [3.1.3](https://github.com/xihan123/QDReadHook/compare/v3.1.2...v3.1.3) (2024-04-18)
 
 ### Features
