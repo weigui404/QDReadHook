@@ -1,4 +1,46 @@
 # Changelog
+## [3.1.4](https://github.com/xihan123/QDReadHook/compare/v3.1.4...v3.1.4) (2024-04-24)
+
+
+### Bug Fixes
+
+* 贡献者列表 ([08f7b1d](https://github.com/xihan123/QDReadHook/commit/08f7b1d640947b4bf01ba7e333ae1caf50e301a9))
+
+
+### Docs
+
+* update .all-contributorsrc [skip ci] ([14eab33](https://github.com/xihan123/QDReadHook/commit/14eab33362e9df1e70593fdd3c5567e58f259a91))
+* update README.md [skip ci] ([fbfa6c3](https://github.com/xihan123/QDReadHook/commit/fbfa6c3e1d26c426019b92232e93f84a6dbf22dc))
+
+
+### Miscellaneous
+
+* **master:** release 3.1.4 ([1d2d047](https://github.com/xihan123/QDReadHook/commit/1d2d0475b868bb0d5f3d30073212efb305efcabe))
+
+## [3.1.4](https://github.com/xihan123/QDReadHook/compare/v3.1.4...v3.1.4) (2024-04-24)
+
+
+### Bug Fixes
+
+* 贡献者列表 ([08f7b1d](https://github.com/xihan123/QDReadHook/commit/08f7b1d640947b4bf01ba7e333ae1caf50e301a9))
+
+## [3.1.4](https://github.com/xihan123/QDReadHook/compare/v3.1.3...v3.1.4) (2024-04-24)
+
+
+### Features
+
+* 添加贡献者列表 ([25eaae0](https://github.com/xihan123/QDReadHook/commit/25eaae0cf953dc52c43117d4a9b11d08fe008061))
+
+
+### Feature Improvements
+
+* **阅读页设置:** 重写阅读时间加倍 [@vvb2060](https://github.com/vvb2060) ([bf0bf7b](https://github.com/xihan123/QDReadHook/commit/bf0bf7b76eb65b56a2f946356daa8fe9a5e47f8a))
+
+
+### Miscellaneous
+
+* 更新依赖 ([7e3c593](https://github.com/xihan123/QDReadHook/commit/7e3c593f7bdfadd691c232d5fe5a176c33671bc8))
+
 ## [3.1.3](https://github.com/xihan123/QDReadHook/compare/v3.1.2...v3.1.3) (2024-04-18)
 
 ### Features
