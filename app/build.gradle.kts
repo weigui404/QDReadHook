@@ -39,7 +39,7 @@ val androidTargetSdkVersion by extra(34)
 val androidMinSdkVersion by extra(26)
 
 android {
-    namespace = "cn.weigui.qdds"
+    namespace = "cn.xihan.qdds"
     compileSdk = androidTargetSdkVersion
 
     androidResources.additionalParameters += arrayOf(
