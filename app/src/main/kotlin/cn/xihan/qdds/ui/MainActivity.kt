@@ -142,6 +142,7 @@ import cn.xihan.qdds.util.requestPermissionDialog
 import cn.xihan.qdds.util.restartApplication
 import cn.xihan.qdds.util.runAndCatch
 import cn.xihan.qdds.util.showAppIcon
+import cn.xihan.qdds.util.toTime
 import cn.xihan.qdds.util.toast
 import cn.xihan.qdds.util.wait
 import coil.compose.rememberAsyncImagePainter
@@ -619,7 +620,8 @@ class MainActivity : ModuleAppCompatActivity() {
                         .fillMaxWidth()
                         .padding(horizontal = 15.dp)
                 ) {
-                    OutlinedTextField(readOnly = true,
+                    OutlinedTextField(
+                        readOnly = true,
                         value = selectedAccount?.uid ?: "",
                         onValueChange = {},
                         label = { Text("选中账号UID") },
@@ -732,6 +734,34 @@ class MainActivity : ModuleAppCompatActivity() {
                                                     })
                                             }
                                     }
+                                }
+                            }
+
+                        }
+                    }
+
+                    ItemWithNewPage(
+                        text = "获取卡牌召唤信息",
+                        modifier = itemModifier,
+                        onClick = viewModel::getCardCallPage
+                    )
+
+                    if (viewModel.cardCallPageModel.value != null) {
+                        TasksCard("卡牌召唤") {
+                            with(viewModel.cardCallPageModel.value!!) {
+                                if (freeNum != 0 && nextFreeTime < System.currentTimeMillis()) {
+                                    TasksItem(
+                                        total = freeNum,
+                                        done = 0,
+                                        title = "免费召唤",
+                                        singleExecution = viewModel::getCardCall
+                                    )
+                                } else {
+                                    ItemWithNewPage(
+                                        text = "还未到免费领卡时间,下一次免费召唤时间: ${nextFreeTime.toTime()}",
+                                        modifier = itemModifier,
+                                        onClick = {}
+                                    )
                                 }
                             }
 
@@ -1107,7 +1137,8 @@ class MainActivity : ModuleAppCompatActivity() {
                                             verticalAlignment = Alignment.CenterVertically
                                         ) {
                                             sublist.forEach { item ->
-                                                StartImageItem(startImageModel = item,
+                                                StartImageItem(
+                                                    startImageModel = item,
                                                     modifier = Modifier
                                                         .combinedClickable(onClick = {},
                                                             onLongClick = {
@@ -1241,6 +1272,18 @@ class MainActivity : ModuleAppCompatActivity() {
                     optionEntity.shieldOption.bookTypeList = parseKeyWordOption(it)
                 })
 
+                val bookWordsCount = rememberMutableStateOf(
+                    value = optionEntity.shieldOption.bookWordsCount.toString()
+                )
+
+                ItemWithEditText(
+                    title = "填入需要屏蔽的书字数,-1为不限制",
+                    text = bookWordsCount,
+                    onTextChange = {
+                        runAndCatch {
+                            optionEntity.shieldOption.bookWordsCount = it.toLong()
+                        }
+                    })
             }
 
             PrimaryCard("隐藏控件设置") {
