@@ -129,7 +129,7 @@ object Option {
      * @suppress Generate Documentation
      */
     val basePath =
-        "/storage/emulated/${(android.system.Os.getuid() / 100000)}/Download/QDReader"
+        "/storage/emulated/${(android.system.Os.getuid() / 100000)}/Download/QDReaderme"
 
     /**
      * 重定向主题路径
