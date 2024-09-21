@@ -68,8 +68,8 @@ public *** getLocalContext(...);
 public *** getLocalOverscrollConfiguration(...);
 }
 #---------------------------------序列化指令区---------------------------------
--keep,includedescriptorclasses class cn.xihan.qdds.**$$serializer { *; }
--keepclassmembers class cn.xihan.qdds.** {
+-keep,includedescriptorclasses class cn.weigui.qdds.**$$serializer { *; }
+-keepclassmembers class cn.weigui.qdds.** {
     *** Companion;
 }
 
